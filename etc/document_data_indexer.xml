@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:module:MateuszMesek_DocumentDataIndexer:etc/document_data_indexer.xsd">
+    <document name="cms_page">
+        <dimensionProvider name="MateuszMesek\DocumentDataCmsPageIndexer\DimensionProvider"/>
+        <entityIdsResolver name="MateuszMesek\DocumentDataCmsPageIndexer\EntityIdsResolver"/>
+        <indexNameResolver name="MateuszMesek\DocumentDataCmsPageIndexer\IndexNameResolver"/>
+        <dataResolver name="MateuszMesek\DocumentDataCmsPageIndexer\DataResolver"/>
+    </document>
+</config>
