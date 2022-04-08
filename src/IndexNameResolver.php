@@ -2,8 +2,8 @@
 
 namespace MateuszMesek\DocumentDataCmsPageIndexer;
 
-use MateuszMesek\DocumentDataIndexerApi\DimensionResolverInterface;
-use MateuszMesek\DocumentDataIndexerApi\IndexNameResolverInterface;
+use MateuszMesek\DocumentDataIndexApi\DimensionResolverInterface;
+use MateuszMesek\DocumentDataIndexApi\IndexNameResolverInterface;
 
 class IndexNameResolver implements IndexNameResolverInterface
 {
