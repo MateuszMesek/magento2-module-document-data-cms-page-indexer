@@ -7,6 +7,7 @@ use Magento\Cms\Model\ResourceModel\Page\CollectionFactory;
 use Magento\Framework\DB\Select;
 use MateuszMesek\DocumentDataIndexApi\DimensionResolverInterface;
 use MateuszMesek\DocumentDataIndexApi\EntityIdsResolverInterface;
+use Throwable;
 use Traversable;
 
 class EntityIdsResolver implements EntityIdsResolverInterface
@@ -33,14 +34,19 @@ class EntityIdsResolver implements EntityIdsResolverInterface
         $collection->setPageSize(100);
         $collection->getSelect()
             ->reset(Select::COLUMNS)
-            ->columns([PageInterface::PAGE_ID])
-            ->setPart('disable_staging_preview', true);
+            ->columns([PageInterface::PAGE_ID]);
+
+        try {
+            $collection->getSelect()->setPart('disable_staging_preview', true);
+        } catch (Throwable $exception) {
+
+        }
 
         $lastId = 0;
 
         while (true) {
             $part = (clone $collection);
-            $part->getSelect()->where('page_id > ?', $lastId);
+            $part->getSelect()->where('main_table.page_id > ?', $lastId);
             $part->load();
 
             $ids = array_map(

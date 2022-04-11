@@ -8,17 +8,17 @@
     </virtualType>
     <type name="MateuszMesek\DocumentDataCmsPageIndexer\DataResolver">
         <arguments>
-            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndexer\DimensionResolver\StoreIdResolver</argument>
+            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndex\DimensionResolver\StoreIdResolver</argument>
         </arguments>
     </type>
     <type name="MateuszMesek\DocumentDataCmsPageIndexer\EntityIdsResolver">
         <arguments>
-            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndexer\DimensionResolver\StoreIdResolver</argument>
+            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndex\DimensionResolver\StoreIdResolver</argument>
         </arguments>
     </type>
     <type name="MateuszMesek\DocumentDataCmsPageIndexer\IndexNameResolver">
         <arguments>
-            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndexer\DimensionResolver\StoreIdResolver</argument>
+            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndex\DimensionResolver\StoreIdResolver</argument>
         </arguments>
     </type>
 </config>
