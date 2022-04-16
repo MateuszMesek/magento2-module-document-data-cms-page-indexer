@@ -3,8 +3,8 @@
 namespace MateuszMesek\DocumentDataCmsPageIndexer;
 
 use MateuszMesek\DocumentDataCmsPage\Command\GetDocumentDataByPageIdAndStoreId;
-use MateuszMesek\DocumentDataIndexApi\DataResolverInterface;
-use MateuszMesek\DocumentDataIndexApi\DimensionResolverInterface;
+use MateuszMesek\DocumentDataIndexIndexerApi\DataResolverInterface;
+use MateuszMesek\DocumentDataIndexIndexerApi\DimensionResolverInterface;
 use Traversable;
 
 class DataResolver implements DataResolverInterface

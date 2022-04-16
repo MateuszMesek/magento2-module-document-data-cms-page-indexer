@@ -5,8 +5,8 @@ namespace MateuszMesek\DocumentDataCmsPageIndexer;
 use Magento\Cms\Api\Data\PageInterface;
 use Magento\Cms\Model\ResourceModel\Page\CollectionFactory;
 use Magento\Framework\DB\Select;
-use MateuszMesek\DocumentDataIndexApi\DimensionResolverInterface;
-use MateuszMesek\DocumentDataIndexApi\EntityIdsResolverInterface;
+use MateuszMesek\DocumentDataIndexIndexerApi\DimensionResolverInterface;
+use MateuszMesek\DocumentDataIndexIndexerApi\EntityIdsResolverInterface;
 use Throwable;
 use Traversable;
 

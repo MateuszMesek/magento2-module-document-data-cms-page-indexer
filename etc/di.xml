@@ -1,24 +1,18 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="MateuszMesek\DocumentDataCmsPageIndexer\DimensionProvider" type="MateuszMesek\DocumentDataIndex\DimensionProvider\WithDocumentNameProvider">
-        <arguments>
-            <argument name="documentName" xsi:type="string">cms_page</argument>
-            <argument name="dimensionProvider" xsi:type="object">Magento\Store\Model\StoreDimensionProvider</argument>
-        </arguments>
-    </virtualType>
     <type name="MateuszMesek\DocumentDataCmsPageIndexer\DataResolver">
         <arguments>
-            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndex\DimensionResolver\StoreIdResolver</argument>
+            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndexIndexer\DimensionResolver\StoreIdResolver</argument>
         </arguments>
     </type>
     <type name="MateuszMesek\DocumentDataCmsPageIndexer\EntityIdsResolver">
         <arguments>
-            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndex\DimensionResolver\StoreIdResolver</argument>
+            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndexIndexer\DimensionResolver\StoreIdResolver</argument>
         </arguments>
     </type>
     <type name="MateuszMesek\DocumentDataCmsPageIndexer\IndexNameResolver">
         <arguments>
-            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndex\DimensionResolver\StoreIdResolver</argument>
+            <argument name="storeIdResolver" xsi:type="object">MateuszMesek\DocumentDataIndexIndexer\DimensionResolver\StoreIdResolver</argument>
         </arguments>
     </type>
 </config>
